@@ -1,3 +1,33 @@
-<span class="title">Percentage Calculator</span>
-<label>Total AMount</label>
-<input nz-input >
+<div style="margin-bottom: 10px;">
+    <span class="title">Percentage Calculator</span>
+</div>
+
+<form nz-form [nzLayout]="'vertical'" [formGroup]="numberForm">
+    <nz-form-item>
+        <nz-form-label [nzSpan]="formLabelSpan">Total Amount</nz-form-label>
+        <nz-form-control [nzSpan]="formFieldSpan">
+            <nz-input-number formControlName="totalAmount" [nzMin]="minValue"></nz-input-number>
+        </nz-form-control>
+    </nz-form-item>
+
+    <nz-form-item>
+        <nz-form-label [nzSpan]="formLabelSpan">Percentage</nz-form-label>
+        <nz-form-control [nzSpan]="formFieldSpan">
+            <nz-input-number 
+            formControlName="percentage" 
+            [nzFormatter]="formatterPercent" 
+            [nzParser]="parserPercent" 
+            [nzMax]="maxPercent" 
+            [nzMin]="minValue">
+            </nz-input-number>
+        </nz-form-control>
+    </nz-form-item>
+
+    <nz-form-item>
+        <label class="answer">
+            <b>{{numberForm.controls['percentage'].value}} %</b> of 
+            <b>{{numberForm.controls['totalAmount'].value}}</b> = 
+            <b>{{calc() | number:'1.2-2'}}</b>
+        </label>
+    </nz-form-item>
+</form>

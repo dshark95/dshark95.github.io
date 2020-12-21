@@ -9,3 +9,5 @@
     font-family: "Minecraft";
     src: local("Minecraft"), url(./assets/fonts/Minecrafter.Alt.ttf) format("truetype");
 }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
