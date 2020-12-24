@@ -7,6 +7,9 @@ import { NzInputModule } from 'ng-zorro-antd/input';
 import { NzInputNumberModule } from 'ng-zorro-antd/input-number';
 import { NzFormModule } from'ng-zorro-antd/form';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NzCollapseModule } from 'ng-zorro-antd/collapse';
+import { NzTableModule } from 'ng-zorro-antd/table';
+import { NzButtonModule } from 'ng-zorro-antd/button';
 
 @NgModule({
   declarations: [CalculatorComponent],
@@ -17,7 +20,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     NzInputNumberModule,
     NzFormModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NzCollapseModule,
+    NzTableModule,
+    NzButtonModule
   ]
 })
 export class ToolsModule { }

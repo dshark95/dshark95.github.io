@@ -17,7 +17,17 @@ export class CalculatorComponent implements OnInit {
   formLabelSpan:number = 7;
   formFieldSpan:number = 12;
 
-  constructor(private fb:FormBuilder) { }
+  tableConfig = [
+    {label: "Equation", key:"equation", width:"200px" },
+    {label: "Result", key:"result", width:"50px" }
+  ];
+
+  tableData:any[] = [];
+
+  isContainerOpen:boolean = true;
+
+  constructor(private fb:FormBuilder) { 
+  }
 
   ngOnInit(): void {
     this.formInit();
@@ -35,7 +45,19 @@ export class CalculatorComponent implements OnInit {
 
   calc():number{
     let multiplier:number = this.numberForm.controls["percentage"].value/100;
-    return this.numberForm.controls["totalAmount"].value * multiplier;
+    return this.rouding(this.numberForm.controls["totalAmount"].value * multiplier, 2);
   }
 
+  rouding(value:number, decimalPoint:number):number{
+    return Math.round(value * Math.pow(10, decimalPoint)) / Math.pow(10, decimalPoint); 
+  }
+
+  save(){
+    let object = {
+      equation: this.numberForm.controls["totalAmount"].value + " x " + this.numberForm.controls["percentage"].value + "%",
+      result:this.calc()
+    }
+
+    this.tableData = [...this.tableData, object];
+  }
 }

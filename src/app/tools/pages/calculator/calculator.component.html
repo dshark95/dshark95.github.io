@@ -27,7 +27,34 @@
         <label class="answer">
             <b>{{numberForm.controls['percentage'].value}} %</b> of 
             <b>{{numberForm.controls['totalAmount'].value}}</b> = 
-            <b>{{calc() | number:'1.2-2'}}</b>
+            <b>{{ calc() }}</b>
         </label>
     </nz-form-item>
+    <div style="margin-bottom: 10px;">
+        <button nz-button nzType="primary" (click)="save()">Save</button>
+    </div>
+    
 </form>
+
+<nz-collapse>
+    <nz-collapse-panel style="max-height: calc(100vh - 74vh);" [nzHeader]="'History'" [(nzActive)]="isContainerOpen">
+        <div>
+            <nz-table
+            #historyList 
+            [nzData]="tableData" 
+            [nzSize]="'small'"
+            [nzPageSize]="2">
+                <thead>
+                    <tr>
+                        <th *ngFor="let header of tableConfig" [nzWidth]="header.width">{{header.label}}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let data of historyList.data">
+                        <td *ngFor="let header of tableConfig">{{data[header.key]}}</td>
+                    </tr>
+                </tbody>
+            </nz-table>
+        </div>        
+    </nz-collapse-panel>
+</nz-collapse>
