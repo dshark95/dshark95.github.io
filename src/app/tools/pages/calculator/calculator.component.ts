@@ -27,7 +27,7 @@ export class CalculatorComponent implements OnInit {
 
   isContainerOpen:boolean = true;
 
-  spaceSize:string = "small";
+  spaceSize:"small" = "small";
 
   constructor(private fb:FormBuilder,
     private modalService:NzModalService) { 
