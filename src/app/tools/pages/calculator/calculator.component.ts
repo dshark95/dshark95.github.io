@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { NzModalService } from 'ng-zorro-antd/modal';
 
 @Component({
   selector: 'app-calculator',
@@ -14,8 +15,8 @@ export class CalculatorComponent implements OnInit {
 
   numberForm!:FormGroup;
 
-  formLabelSpan:number = 7;
-  formFieldSpan:number = 12;
+  formLabelSpan:number = 4;
+  formFieldSpan:number = 8;
 
   tableConfig = [
     {label: "Equation", key:"equation", width:"200px" },
@@ -26,7 +27,10 @@ export class CalculatorComponent implements OnInit {
 
   isContainerOpen:boolean = true;
 
-  constructor(private fb:FormBuilder) { 
+  spaceSize:string = "small";
+
+  constructor(private fb:FormBuilder,
+    private modalService:NzModalService) { 
   }
 
   ngOnInit(): void {
@@ -59,5 +63,21 @@ export class CalculatorComponent implements OnInit {
     }
 
     this.tableData = [...this.tableData, object];
+
+    this.markAsClean();
+  }
+
+  markAsClean(){
+    this.numberForm.markAsPristine();
+  }
+
+  clear(){
+    this.modalService.confirm({
+      nzTitle: '<b>Do you want to clear these items?</b>',
+      nzContent: '',
+      nzOnOk: () => {
+        this.tableData = [];
+      }
+    });
   }
 }

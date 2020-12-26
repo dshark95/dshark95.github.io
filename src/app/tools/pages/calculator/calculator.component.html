@@ -2,7 +2,7 @@
     <span class="title">Percentage Calculator</span>
 </div>
 
-<form nz-form [nzLayout]="'vertical'" [formGroup]="numberForm">
+<form nz-form [nzLayout]="'horizontal'" [formGroup]="numberForm">
     <nz-form-item>
         <nz-form-label [nzSpan]="formLabelSpan">Total Amount</nz-form-label>
         <nz-form-control [nzSpan]="formFieldSpan">
@@ -30,15 +30,20 @@
             <b>{{ calc() }}</b>
         </label>
     </nz-form-item>
-    <div style="margin-bottom: 10px;">
-        <button nz-button nzType="primary" (click)="save()">Save</button>
-    </div>
-    
+    <nz-space [nzSize]="spaceSize">
+        <nz-space-item>
+            <button [disabled]="!numberForm.dirty" nz-button nzType="primary" (click)="save()">{{"LANG.SAVE" | transloco}}</button>
+        </nz-space-item>
+        <nz-space-item>
+            <button [disabled]="tableData.length==0" nz-button (click)="clear()">{{"LANG.CLEAR" | transloco}}</button>
+        </nz-space-item>
+    </nz-space>
+    <div style="margin-bottom: 10px;"></div>
 </form>
 
 <nz-collapse>
-    <nz-collapse-panel style="max-height: calc(100vh - 74vh);" [nzHeader]="'History'" [(nzActive)]="isContainerOpen">
-        <div>
+    <nz-collapse-panel  [nzHeader]="'History'" [(nzActive)]="isContainerOpen">
+        <div style="max-height: calc(100vh - 70vh);overflow: auto;">
             <nz-table
             #historyList 
             [nzData]="tableData" 

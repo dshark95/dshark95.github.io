@@ -10,6 +10,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NzCollapseModule } from 'ng-zorro-antd/collapse';
 import { NzTableModule } from 'ng-zorro-antd/table';
 import { NzButtonModule } from 'ng-zorro-antd/button';
+import { NzSpaceModule } from 'ng-zorro-antd/space';
+import { NzModalModule } from 'ng-zorro-antd/modal';
+import { TranslocoModule } from '@ngneat/transloco';
 
 @NgModule({
   declarations: [CalculatorComponent],
@@ -23,7 +26,10 @@ import { NzButtonModule } from 'ng-zorro-antd/button';
     ReactiveFormsModule,
     NzCollapseModule,
     NzTableModule,
-    NzButtonModule
+    NzButtonModule,
+    NzSpaceModule,
+    NzModalModule,
+    TranslocoModule
   ]
 })
 export class ToolsModule { }
