@@ -1,4 +1,11 @@
 {
     "LANG.SAVE": "Save",
-    "LANG.CLEAR": "Clear"
+    "LANG.CLEAR": "Clear",
+    "LANG.OPTIONS": "Options",
+    "LANG.ADD": "Add",
+    "LANG.SUBTRACT": "Subtract",
+    "LANG.MULTIPLY": "Multiply",
+    "LANG.DIVIDE": "Divide",
+    "LANG.OK": "Ok",
+    "LANG.REMOVE": "Remove"
 }

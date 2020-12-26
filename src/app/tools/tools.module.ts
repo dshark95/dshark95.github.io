@@ -12,10 +12,13 @@ import { NzTableModule } from 'ng-zorro-antd/table';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzSpaceModule } from 'ng-zorro-antd/space';
 import { NzModalModule } from 'ng-zorro-antd/modal';
+import { NzDropDownModule } from 'ng-zorro-antd/dropdown';
+import { NzSelectModule } from 'ng-zorro-antd/select';
 import { TranslocoModule } from '@ngneat/transloco';
+import { CalculationModalComponent } from './modal/calculation-modal/calculation-modal.component';
 
 @NgModule({
-  declarations: [CalculatorComponent],
+  declarations: [CalculatorComponent, CalculationModalComponent],
   imports: [
     CommonModule,
     ToolsRoutingModule,
@@ -29,6 +32,8 @@ import { TranslocoModule } from '@ngneat/transloco';
     NzButtonModule,
     NzSpaceModule,
     NzModalModule,
+    NzDropDownModule,
+    NzSelectModule,
     TranslocoModule
   ]
 })

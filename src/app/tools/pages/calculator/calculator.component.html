@@ -52,11 +52,27 @@
                 <thead>
                     <tr>
                         <th *ngFor="let header of tableConfig" [nzWidth]="header.width">{{header.label}}</th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let data of historyList.data">
-                        <td *ngFor="let header of tableConfig">{{data[header.key]}}</td>
+                    <tr *ngFor="let data of historyList.data;let i=index;">
+                        <td *ngFor="let header of tableConfig;">{{data[header.key]}}</td>
+                        <td>
+                            <a nz-dropdown [nzDropdownMenu]="menu">
+                                {{"LANG.OPTIONS" | transloco}}
+                                <i nz-icon nzType="down"></i>
+                              </a>
+                              <nz-dropdown-menu #menu="nzDropdownMenu">
+                                <ul nz-menu nzSelectable>
+                                  <li nz-menu-item (click)="openAddonCalculationModal(data.result)">Addon Calculation</li>
+                                  <li nz-menu-item nzDanger="true" (click)="clearSingle(i)">{{"LANG.REMOVE" | transloco}}</li>
+                                  <!-- <li nz-menu-item>2nd menu item</li>
+                                  <li nz-menu-item>3rd menu item</li>
+                                  <li nz-menu-item nzDanger>4th danger item</li> -->
+                                </ul>
+                              </nz-dropdown-menu>
+                        </td>
                     </tr>
                 </tbody>
             </nz-table>

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { NzModalService } from 'ng-zorro-antd/modal';
+import { NzModalRef, NzModalService } from 'ng-zorro-antd/modal';
+import { CalculationModalComponent } from '../../modal/calculation-modal/calculation-modal.component';
 
 @Component({
   selector: 'app-calculator',
@@ -80,4 +81,61 @@ export class CalculatorComponent implements OnInit {
       }
     });
   }
+
+  clearSingle(i:number){
+    this.modalService.confirm({
+      nzTitle: '<b>Do you want to remove this result?</b>',
+      nzContent: '',
+      nzOnOk: () => { console.log(i);
+        this.tableData = [...this.tableData.filter((x,index)=> index!=i)];
+        this.markAsClean();
+      }
+    });
+  }
+
+  openAddonCalculationModal(value:number){
+    let modalRef:NzModalRef = 
+    this.modalService.create({
+      nzContent:CalculationModalComponent,
+      nzFooter:null,
+      nzTitle:"Addon Calculation",
+      nzComponentParams:{
+        value:value
+      }
+    });
+
+    modalRef.afterClose.subscribe(respond=>{
+      if(respond){
+        let object = {
+          equation:"-",
+          result:0
+        };
+
+        switch (respond.action) {
+          case "add":
+            object.equation = value + " + " + respond.addonValue;
+            object.result = Number(value) + Number(respond.addonValue);
+            break;
+          case "subtract":
+            object.equation = value + " - " + respond.addonValue;
+            object.result = Number(value) - Number(respond.addonValue);
+            break;
+          case "multiply":
+            object.equation = value + " x " + respond.addonValue;
+            object.result = Number(value) * Number(respond.addonValue);
+            break;
+          case "divide":
+            object.equation = value + " / " + respond.addonValue;
+            object.result = Number(value) / Number(respond.addonValue);
+            break;        
+          default:
+            break;
+        }
+
+        object.result = this.rouding(object.result, 2);
+
+        this.tableData = [...this.tableData, object];
+      }
+    });
+  } 
 }

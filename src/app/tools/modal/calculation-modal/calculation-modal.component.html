@@ -1,0 +1,21 @@
+<nz-space [nzSize]="nzSize">
+    <nz-space-item>{{value}}</nz-space-item>
+    <nz-space-item>
+        <nz-select style="width: 120px;" [(ngModel)]="action" [nzSize]="nzSize">
+            <nz-option *ngFor="let option of dropdownList" 
+            [nzValue]="option.key" 
+            [nzLabel]="option.label | transloco" >
+            </nz-option>
+        </nz-select>
+    </nz-space-item>
+    <nz-space-item>
+        <nz-input-number [nzSize]="nzSize" [(ngModel)]="addonValue" [nzMin]="minValue"></nz-input-number>
+    </nz-space-item>
+</nz-space>
+<nz-space [nzSize]="nzSize">
+    <nz-space-item>
+        <button nz-button (click)="ok()">{{"LANG.OK" | transloco}}</button>
+    </nz-space-item>
+</nz-space>
+
+
