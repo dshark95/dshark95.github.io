@@ -1,4 +1,11 @@
 {
     "LANG.SAVE": "保存",
-    "LANG.CLEAR": "清理"
+    "LANG.CLEAR": "清理",
+    "LANG.OPTIONS": "选项",
+    "LANG.ADD": "加于",
+    "LANG.SUBTRACT": "减于",
+    "LANG.MULTIPLY": "乘于",
+    "LANG.DIVIDE": "除于",
+    "LANG.OK": "Ok",
+    "LANG.REMOVE": "清除"
 }

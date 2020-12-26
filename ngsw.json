@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1608977079306,
+  "timestamp": 1609001344034,
   "index": "amtCalc/index.html",
   "assetGroups": [
     {
@@ -12,13 +12,13 @@
       },
       "urls": [
         "amtCalc/4.d740a17c2af0d4ff8c02.js",
-        "amtCalc/5.5f25d60a4aef459e7317.js",
+        "amtCalc/5.e04e3cd6da7452d6cbb6.js",
         "amtCalc/favicon.ico",
         "amtCalc/index.html",
         "amtCalc/main.17b8472152d7cecaf254.js",
         "amtCalc/manifest.webmanifest",
         "amtCalc/polyfills.8c151b8375e767ff858f.js",
-        "amtCalc/runtime.b2b080df863793ee6159.js",
+        "amtCalc/runtime.0086cfa4eaf23342472f.js",
         "amtCalc/styles.27fcafc272b481a102cd.css"
       ],
       "patterns": []
@@ -1645,7 +1645,7 @@
   "dataGroups": [],
   "hashTable": {
     "amtCalc/4.d740a17c2af0d4ff8c02.js": "dd7620a3a29fdef42d3201b37d8187c12edcc053",
-    "amtCalc/5.5f25d60a4aef459e7317.js": "4ccfa102840e89fc5ef99dd6bc2ab940a7a6fff0",
+    "amtCalc/5.e04e3cd6da7452d6cbb6.js": "d58fb53f797d3aedfb0ce030374a342b6cd1c618",
     "amtCalc/Cyberpunk.ce09ddf4d0a0f2fd4619.ttf": "18ebbf88d19f6fa8774a82ad45cce33d58d26a5c",
     "amtCalc/EBGaramond-SemiBold.ede9190003b46785f709.ttf": "64654b3bdc653edf8b27bd8045257ffd75bb4b52",
     "amtCalc/Minecrafter.Alt.e055747ae2ed69bb05d7.ttf": "0cd8c75e12feefa7260bf2cd416a2630eba3e96e",
@@ -2101,8 +2101,8 @@
     "amtCalc/assets/fonts/EBGaramond-SemiBoldItalic.ttf": "6502498a75a8fb5be961e04832346d8160c815ee",
     "amtCalc/assets/fonts/Minecrafter.Alt.ttf": "0cd8c75e12feefa7260bf2cd416a2630eba3e96e",
     "amtCalc/assets/gifs/noodingCatSm.gif": "f79d02a5f799f0f9affa17514aac08b61ce7b602",
-    "amtCalc/assets/i18n/cn.json": "aa4d1efa92373ef0e849448cedb544ddbb17e5e0",
-    "amtCalc/assets/i18n/en.json": "37f7b203f0e8fd00c6fab00d514e38a3c8c9e528",
+    "amtCalc/assets/i18n/cn.json": "2be003a7086d3e897518fc75e8f19a1bdd4bf09d",
+    "amtCalc/assets/i18n/en.json": "cf3f841ba3a89624b3b721d87d7cb2e42681870d",
     "amtCalc/assets/icons/icon-128x128.png": "1d40b7984b75e9d38e9a6651e10f8b7c97c1058f",
     "amtCalc/assets/icons/icon-144x144.png": "b7e9b56b0e9cc3878dde9f1037854e85c488c462",
     "amtCalc/assets/icons/icon-152x152.png": "8e481ac658320aa6376775fedc4ad8e15ac4ce91",
@@ -3254,11 +3254,11 @@
     "amtCalc/assets/twotone/warning.js": "fb2d7ea232f3a99bf8f080dbc94c65699232ac01",
     "amtCalc/assets/twotone/warning.svg": "8c7a2d3e765a2e7dd58ac674870c6655cecb0068",
     "amtCalc/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "amtCalc/index.html": "786db54e6d63191d365ab6e71db5e5e7ac9beafc",
+    "amtCalc/index.html": "24942b4aa8335d87153ce03db3accca7a4f9abce",
     "amtCalc/main.17b8472152d7cecaf254.js": "1bfc1b0fea302a73ab62e93c442248f3519129d3",
     "amtCalc/manifest.webmanifest": "2c498d5bf0c68a214b7d159336009491c79f686b",
     "amtCalc/polyfills.8c151b8375e767ff858f.js": "763cd3b34dfa4600ebb9d9588ec7116988e98920",
-    "amtCalc/runtime.b2b080df863793ee6159.js": "d634c527ec9c93fb6377e8e7a3d81058f3e92a60",
+    "amtCalc/runtime.0086cfa4eaf23342472f.js": "4fe2d57630bf39efc622232022face5fbae27905",
     "amtCalc/styles.27fcafc272b481a102cd.css": "b2d20b986552ed26c194ae02920d158454b7c6a6"
   },
   "navigationUrls": [
