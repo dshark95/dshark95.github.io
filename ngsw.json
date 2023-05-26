@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1685072882673,
+  "timestamp": 1685083261428,
   "index": "amtCalc/index.html",
   "assetGroups": [
     {
@@ -11,14 +11,14 @@
         "ignoreVary": true
       },
       "urls": [
-        "amtCalc/4.0962d40736b99dd57f6a.js",
-        "amtCalc/5.cf3c439310f217ac4e6d.js",
+        "amtCalc/4.3277a9ba41f5e1e048b5.js",
+        "amtCalc/5.8db0df385d0adf74a6dc.js",
         "amtCalc/favicon.ico",
         "amtCalc/index.html",
-        "amtCalc/main.572cc4db439be266af6e.js",
+        "amtCalc/main.501249edda71b4423e6b.js",
         "amtCalc/manifest.webmanifest",
         "amtCalc/polyfills.8c151b8375e767ff858f.js",
-        "amtCalc/runtime.a8c2463adadb89331fde.js",
+        "amtCalc/runtime.3995e7c34a5f4ca7aa49.js",
         "amtCalc/styles.e3ef44fb47192d96e3fa.css"
       ],
       "patterns": []
@@ -1644,8 +1644,8 @@
   ],
   "dataGroups": [],
   "hashTable": {
-    "amtCalc/4.0962d40736b99dd57f6a.js": "9b5ef22a2368ce3bc9e6b20789c6ea0817f5615e",
-    "amtCalc/5.cf3c439310f217ac4e6d.js": "5a9ec15667efa1cc09db122c263a62e5685e87cf",
+    "amtCalc/4.3277a9ba41f5e1e048b5.js": "9707c225100201964e4b3a48dd0429bdd6188412",
+    "amtCalc/5.8db0df385d0adf74a6dc.js": "2c8f4b7ad3b4a55e5bf112efe65334bfe13ee70c",
     "amtCalc/Cyberpunk.ce09ddf4d0a0f2fd4619.ttf": "18ebbf88d19f6fa8774a82ad45cce33d58d26a5c",
     "amtCalc/EBGaramond-SemiBold.ede9190003b46785f709.ttf": "64654b3bdc653edf8b27bd8045257ffd75bb4b52",
     "amtCalc/Minecrafter.Alt.e055747ae2ed69bb05d7.ttf": "0cd8c75e12feefa7260bf2cd416a2630eba3e96e",
@@ -3254,11 +3254,11 @@
     "amtCalc/assets/twotone/warning.js": "fb2d7ea232f3a99bf8f080dbc94c65699232ac01",
     "amtCalc/assets/twotone/warning.svg": "8c7a2d3e765a2e7dd58ac674870c6655cecb0068",
     "amtCalc/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "amtCalc/index.html": "1d124d4dc03214025f28c022bfd07938f4076b9f",
-    "amtCalc/main.572cc4db439be266af6e.js": "1c910ef8c334dc73552eb583e6716e90b08beb44",
+    "amtCalc/index.html": "76f6519b6b3f633d3ba143a71610b01d5acec5ea",
+    "amtCalc/main.501249edda71b4423e6b.js": "cd3fecc3f6514d3430b9d14cce49b0c0e1889f2b",
     "amtCalc/manifest.webmanifest": "4906c22a456bda53d7fc21e37dd8a16dbb9030d5",
     "amtCalc/polyfills.8c151b8375e767ff858f.js": "763cd3b34dfa4600ebb9d9588ec7116988e98920",
-    "amtCalc/runtime.a8c2463adadb89331fde.js": "df85ac2c75f281d4286eae0d0cc6e2d3931f512e",
+    "amtCalc/runtime.3995e7c34a5f4ca7aa49.js": "e77b520ca74d14560091414f4ee684abf5be9998",
     "amtCalc/styles.e3ef44fb47192d96e3fa.css": "a41e7215f9938fd996e23562e001154bb51eb254"
   },
   "navigationUrls": [
